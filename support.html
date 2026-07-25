@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LionTrack — Support</title>
+    <style>
+        :root {
+            --bg: #f4f8f4;
+            --card-bg: #ffffff;
+            --accent: #1B4332;
+            --accent-secondary: #E8500A;
+            --accent-light: #e8f5e9;
+            --text: #1a2e1a;
+            --text-muted: #5a6b5a;
+            --border: #dce8dc;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06);
+            --radius: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card p, .card li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card ul {
+            padding-left: 1.5rem;
+        }
+
+        .card li { margin-bottom: 0.5rem; }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-btn:hover { background: #143526; }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <a href="index.html" class="back-link">← Back to LionTrack</a>
+
+        <h1>Support</h1>
+
+        <section class="card">
+            <h2>Getting Started</h2>
+            <ul>
+                <li><strong>Create an account</strong> — Sign up with email/password, Google, or Apple Sign-In.</li>
+                <li><strong>Create your team</strong> — Enter your team name and age group to get started.</li>
+                <li><strong>Add players</strong> — Add up to 10 players on the free tier, or unlimited with Pro.</li>
+                <li><strong>Run a match</strong> — Tap "Start Match" to begin live stat tracking on matchday.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Account &amp; Subscription</h2>
+            <ul>
+                <li><strong>Free tier</strong> — 1 team, up to 10 players, 3 matches. Full access to core features.</li>
+                <li><strong>Pro subscription</strong> — Unlimited players, matches, teams, media gallery, season export, and more.</li>
+                <li><strong>Restore purchases</strong> — Go to Settings &gt; Subscription &gt; Restore Purchases.</li>
+                <li><strong>Cancel subscription</strong> — Manage your subscription through the App Store (iOS) or Google Play (Android).</li>
+                <li><strong>Delete account</strong> — Contact us at the email below. All data will be permanently deleted within 30 days.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><strong>App won't load</strong> — Check your internet connection. LionTrack requires connectivity for authentication and data sync.</li>
+                <li><strong>Match data not saving</strong> — Ensure you have an active Pro subscription if you've exceeded the free tier limits.</li>
+                <li><strong>Notifications not working</strong> — Check that notification permissions are enabled in your device settings.</li>
+                <li><strong>Biometric login issues</strong> — If you've re-enrolled your fingerprint/face, disable and re-enable biometrics in Settings.</li>
+                <li><strong>Photos not uploading</strong> — Check storage quota in Settings. Each coach has a 500MB limit.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Parent &amp; Player Accounts</h2>
+            <ul>
+                <li><strong>Linking to a child</strong> — Parents sign up and enter the link code provided by the coach.</li>
+                <li><strong>Player dashboard</strong> — Players see their own XP, badges, streaks, and positive stats only.</li>
+                <li><strong>Match To Pro</strong> — An optional player subscription for comparing stats with professional footballers.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Contact Us</h2>
+            <p>Can't find what you need? Reach out directly and we'll get back to you as soon as possible.</p>
+            <a href="mailto:camillericreations@icloud.com" class="contact-btn">📧 camillericreations@icloud.com</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Camilleri Creations</p>
+            <p style="margin-top: 0.5rem;"><a href="privacy.html">Privacy Policy</a> · <a href="index.html">Home</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>

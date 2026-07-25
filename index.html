@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LionTrack — Grassroots Youth Football Team Management</title>
+    <style>
+        :root {
+            --bg: #f4f8f4;
+            --card-bg: #ffffff;
+            --accent: #1B4332;
+            --accent-secondary: #E8500A;
+            --accent-light: #e8f5e9;
+            --text: #1a2e1a;
+            --text-muted: #5a6b5a;
+            --border: #dce8dc;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06);
+            --radius: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero .lion {
+            font-size: 3rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            color: var(--accent);
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border: 1px solid var(--border);
+        }
+
+        .about p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .about p:last-child { margin-bottom: 0; }
+
+        /* App Card */
+        .app-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1.5rem;
+            align-items: start;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+
+        .app-info h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .app-info .platforms {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-ios {
+            background: #e8f4fd;
+            color: #0071e3;
+        }
+
+        .badge-android {
+            background: #e8f8e8;
+            color: #1b873f;
+        }
+
+        .app-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .features-list li {
+            font-size: 0.8rem;
+            background: var(--accent-light);
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            color: var(--text-muted);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .faq h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 0.85rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .contact-btn:hover {
+            background: #143526;
+            transform: scale(1.02);
+        }
+
+        .contact-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Links section */
+        .links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .links a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .app-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .app-icon {
+                margin: 0 auto;
+            }
+            .features-list {
+                justify-content: center;
+            }
+            .app-info .platforms {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+            <p class="lion">🦁</p>
+            <h1>LionTrack</h1>
+            <p class="tagline">Grassroots youth football team management — built by a coach, for coaches.</p>
+        </section>
+
+        <!-- About -->
+        <section class="about">
+            <p>LionTrack is built for grassroots youth football coaches who want to focus on what matters: developing young players, not wrestling with spreadsheets.</p>
+            <p>Track attendance, record match stats, manage squads, award XP and badges, and share progress with parents — all from one app that fits in your pocket on the touchline.</p>
+            <p>Designed with accessibility in mind, including a neurodivergent mode with high contrast, reduced motion, and simplified UI options.</p>
+        </section>
+
+        <!-- App Card -->
+        <section class="app-card">
+            <img src="app-icon.png" alt="LionTrack app icon" class="app-icon">
+            <div class="app-info">
+                <h2>LionTrack</h2>
+                <div class="platforms">
+                    <span class="badge badge-ios">iOS</span>
+                    <span class="badge badge-android">Android</span>
+                </div>
+                <p>The complete team management app for grassroots youth football. Manage your squad, track live match stats, monitor player development, and keep parents in the loop — all in one place.</p>
+                <ul class="features-list">
+                    <li>⚽ Live match tracking</li>
+                    <li>📊 Player stats &amp; XP</li>
+                    <li>🏆 Badges &amp; rewards</li>
+                    <li>👥 Squad management</li>
+                    <li>📅 Training attendance</li>
+                    <li>👨‍👩‍👧 Parent dashboard</li>
+                    <li>🎮 Player dashboard</li>
+                    <li>📱 Home screen widgets</li>
+                    <li>🔒 Safeguarding tools</li>
+                    <li>📄 Season PDF export</li>
+                    <li>🎨 5 colour themes</li>
+                    <li>♿ Neurodivergent mode</li>
+                    <li>⭐ Pro Comparison</li>
+                    <li>🔥 Match streaks</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What is LionTrack?</h3>
+                <p>LionTrack is a team management app designed specifically for grassroots youth football coaches. It helps you manage squads, track live match stats, record training attendance, award player XP and badges, and share updates with parents.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is LionTrack free?</h3>
+                <p>LionTrack has a free tier that lets you manage one team with up to 10 players and 3 matches. The Pro subscription unlocks unlimited players, matches, media gallery, season export, and more.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is Match To Pro?</h3>
+                <p>Match To Pro is an optional player subscription that unlocks professional player comparisons. Players can pick a favourite pro and see how their stats compare, plus get club news and match results from their favourite team.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can parents see their child's progress?</h3>
+                <p>Yes! Parents link to their child's profile and get a read-only dashboard showing XP, badges, match highlights, attendance, and streaks. Coaches control what's visible.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data secure?</h3>
+                <p>All data is stored securely in Firebase with encryption in transit and at rest. Photos are stored in Firebase Storage with per-coach quotas. You can request full data deletion at any time.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I have a secondary coach?</h3>
+                <p>Yes. You can invite a secondary coach who gets read-only access to your team data. They can view everything but can't edit, delete, or create content.</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <h2>Need help? Get in touch.</h2>
+            <p>Whether it's a feature request, a bug report, or a question about your account — we're here to help.</p>
+            <a href="mailto:camillericreations@icloud.com" class="contact-btn">📧 camillericreations@icloud.com</a>
+            <div class="links">
+                <a href="support.html">📋 Support</a>
+                <a href="privacy.html">🔒 Privacy Policy</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Camilleri Creations. Built with care on the touchline.</p>
+            <p style="margin-top: 0.5rem;"><a href="https://github.com/camillerimichel-cell">GitHub</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>
